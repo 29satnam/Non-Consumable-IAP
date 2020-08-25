@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m1j-C8-WsM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="jiu-4q-0qZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="m1j-C8-WsM" customClass="ViewController" customModule="Non_Consumable_IAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YfJ-aw-FtA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEx-kV-qen">
+                                <rect key="frame" x="103.5" y="438" width="207" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Restore Purchase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restorePurchaseButt:" destination="m1j-C8-WsM" eventType="touchUpInside" id="2mL-8E-cGd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H2-QM-c6q">
+                                <rect key="frame" x="103.5" y="388" width="207" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Unlock Pro Version">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="unlockProButt:" destination="m1j-C8-WsM" eventType="touchUpInside" id="DZb-wi-CbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVy-F3-hvA">
+                                <rect key="frame" x="170.5" y="478" width="73" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Privacy Policy"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8bm-52-wyv">
+                                <rect key="frame" x="197" y="393" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nEx-kV-qen" firstAttribute="top" secondItem="8bm-52-wyv" secondAttribute="bottom" constant="25" id="4dK-JM-YvN"/>
+                            <constraint firstItem="nEx-kV-qen" firstAttribute="width" secondItem="3H2-QM-c6q" secondAttribute="width" id="8vs-8t-OeD"/>
+                            <constraint firstItem="3H2-QM-c6q" firstAttribute="centerX" secondItem="nLN-bq-qIS" secondAttribute="centerX" id="BWs-CU-rGd"/>
+                            <constraint firstItem="nEx-kV-qen" firstAttribute="top" secondItem="3H2-QM-c6q" secondAttribute="bottom" constant="20" id="DIT-78-non"/>
+                            <constraint firstItem="nEx-kV-qen" firstAttribute="centerY" secondItem="nLN-bq-qIS" secondAttribute="centerY" id="Mq5-oT-aib"/>
+                            <constraint firstItem="nEx-kV-qen" firstAttribute="centerX" secondItem="nLN-bq-qIS" secondAttribute="centerX" id="NIK-kh-giT"/>
+                            <constraint firstItem="8bm-52-wyv" firstAttribute="centerX" secondItem="nLN-bq-qIS" secondAttribute="centerX" id="NOu-88-bdm"/>
+                            <constraint firstItem="mVy-F3-hvA" firstAttribute="centerX" secondItem="nLN-bq-qIS" secondAttribute="centerX" id="ha8-QE-tB1"/>
+                            <constraint firstItem="mVy-F3-hvA" firstAttribute="top" secondItem="nEx-kV-qen" secondAttribute="bottom" constant="10" id="kuX-fM-o2K"/>
+                            <constraint firstItem="3H2-QM-c6q" firstAttribute="width" secondItem="YfJ-aw-FtA" secondAttribute="width" multiplier="0.5" id="ueM-OD-we6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nLN-bq-qIS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3VW-DP-lJh"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8bm-52-wyv" id="Qbt-YC-Wnw"/>
+                        <outlet property="restorePurchaseButton" destination="nEx-kV-qen" id="3Vp-gT-blo"/>
+                        <outlet property="unlockProButton" destination="3H2-QM-c6q" id="6SL-Aq-pAA"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4b-T6-RBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-158" y="462"/>
         </scene>
     </scenes>
 </document>
